@@ -5,8 +5,16 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+
+  First run looked fine on the surface. The title, guess box, submit, and new game buttons all showed up. Once I started playing it fell apart. It felt delayed and incosistent and I noticed bugs below.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  - The hints are backwards
+  - Score goes negative
+  - Attempts left aren't respected
+  - The new game button doesnt work
+  - History is one step behind
 
 **Bug Reproduction Log**
 
@@ -14,9 +22,10 @@ Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| new game | start new game with refreshed attempts | no new game is started | NA |
+| guess 60, secret 77 (from debug) | hint says go lower | hint says go higher | NA |
+| submit wrong guesses a few times | score stays at 0 or goes up on wins | score goes negative | NA |
+| submit a guess | history updates right away in debug tab | history is one step behind | NA |
 
 ---
 
